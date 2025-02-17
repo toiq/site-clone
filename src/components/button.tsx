@@ -3,19 +3,20 @@ import { cn } from "@/utils/cn";
 
 type ButtonProps = {
   className?: string;
-  variant?: "default" | "ghost";
+  variant?: "default" | "outline";
   size?: "small" | "medium" | "large";
   asChild?: boolean;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 const buttonVariants = {
-  default: "bg-blue-600 text-white hover:bg-blue-700",
-  ghost: "bg-transparent text-blue-600 hover:bg-blue-100",
+  default: "bg-accent hover:bg-blue-700 text-white",
+  outline:
+    "bg-transparent border border-[#e8eef7] hover:border-accent text-accent",
 };
 
 const buttonSizes = {
-  small: "px-2 py-1 text-sm",
-  medium: "px-4 py-2 text-base",
+  small: "px-2 py-1",
+  medium: "px-10 py-5",
   large: "py-[22px] w-[240px]",
 };
 
@@ -32,7 +33,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <Component
       className={cn(
-        "rounded-[800px] bg-[#005ed4] text-center font-bold hover:cursor-pointer",
+        "rounded-[800px] border border-[#006ff9] bg-[#005ed4] text-center font-bold hover:cursor-pointer",
         buttonVariants[variant],
         buttonSizes[size],
         className,

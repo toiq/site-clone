@@ -1,6 +1,7 @@
 import { ConnectContent } from "@/features/connect/connect-content";
 import { FooterContent } from "@/features/footer/footer-content";
 import { HeroContent } from "@/features/hero/hero-content";
+import { ProjectsContent } from "@/features/projects/project-content";
 import { SummaryContent } from "@/features/summary/summary-content";
 
 export default function Home() {
@@ -10,6 +11,12 @@ export default function Home() {
         <section id="hero">
           <div className="custom-container container pb-[86px] pt-40">
             <HeroContent />
+          </div>
+        </section>
+
+        <section id="projects">
+          <div className="custom-container container pb-[86px] pt-40">
+            <ProjectsContent />
           </div>
         </section>
 

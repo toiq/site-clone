@@ -72,10 +72,10 @@ const social = [
 
 export const FooterContent = () => {
   return (
-    <div className="pt-[67px]">
+    <div className="pt-[70px]">
       <div className="flex min-h-[256px] w-full justify-between">
         {/* Left Side */}
-        <div className="w-1/2 px-3 font-manrope">
+        <div className="w-1/2 font-manrope">
           <p className="mb-5 text-[28px] font-extrabold leading-[45px] text-primary">
             Crafting user friendly <br /> products aesthetically
           </p>
@@ -96,10 +96,10 @@ export const FooterContent = () => {
         <div className="grid w-1/2 grid-cols-3 px-3 font-manrope">
           {links.map((footerLink, i) => (
             <div key={i} className="col-span-1 text-sm text-secondary">
-              <p className="pb-[22px]">{footerLink.name}</p>
+              <p className="mb-[22px]">{footerLink.name}</p>
               <ul>
                 {footerLink.items.map((footerLinkItem, i) => (
-                  <li key={i} className="mb-5">
+                  <li key={i} className="mb-[21px]">
                     {footerLinkItem.link ? (
                       <Link
                         href={footerLinkItem.link}
@@ -120,7 +120,7 @@ export const FooterContent = () => {
         </div>
       </div>
       {/* Social and Copyright */}
-      <div className="px-3">
+      <div className="">
         <div className="border-t border-[#f5f7f9] font-manrope">
           <div className="flex items-center justify-between py-10">
             <div className="flex items-center gap-12">

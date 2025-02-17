@@ -17,7 +17,7 @@ const buttonVariants = {
 const buttonSizes = {
   small: "px-[35px] py-[15px] text-sm",
   medium: "px-10 py-[19px]",
-  large: "py-[22px] w-[240px]",
+  large: "py-[21px] w-[240px]",
 };
 
 export const Button: React.FC<ButtonProps> = ({

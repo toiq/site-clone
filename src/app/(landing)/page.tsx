@@ -13,7 +13,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="summary" className="min-h-screen bg-[#15141b]">
+        <section id="summary" className="bg-[#15141b]">
           <div className="custom-container container py-[120px]">
             <SummaryContent />
           </div>

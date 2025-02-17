@@ -21,11 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.variable} relative min-h-screen antialiased`}>
-        <header className="fixed top-0 z-10 w-full backdrop-blur-[48px]">
+        <header className="fixed top-0 z-10 hidden w-full backdrop-blur-[48px]">
           <Navbar />
         </header>
         {children}
-        <div className="fixed right-0 top-1/2 z-20 -translate-y-1/2 transform">
+        <div className="fixed right-0 top-1/2 z-20 w-fit -translate-y-1/2 transform">
           <SideButtonLink />
         </div>
       </body>

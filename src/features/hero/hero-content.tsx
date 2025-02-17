@@ -31,7 +31,7 @@ export const HeroContent = () => {
               href="https://www.dipainhouse.com/contact-us"
               className="h-full w-full"
             >
-              Check out work
+              Check our work
             </Link>
           </Button>
         </div>

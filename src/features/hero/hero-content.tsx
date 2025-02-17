@@ -7,7 +7,7 @@ export const HeroContent = () => {
       <p className="text-[78px] font-[900] leading-[101px] tracking-[-3.12px] text-primary">
         Crafting user friendly <br /> products aesthetically
       </p>
-      <p className="mt-8 text-2xl font-medium leading-[43px] text-secondary">
+      <p className="mt-8 text-2xl font-medium leading-[43px] tracking-[0.24px] text-secondary">
         Help find solutions that are intuitive and in accordance with client
         business goals. We provide a high-quality service in UI/UX Design,
         Graphic Design, Motion Design, Branding & Development.

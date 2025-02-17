@@ -15,7 +15,7 @@ const buttonVariants = {
 };
 
 const buttonSizes = {
-  small: "px-2 py-1",
+  small: "px-9 py-[15px] text-sm",
   medium: "px-10 py-5",
   large: "py-[22px] w-[240px]",
 };

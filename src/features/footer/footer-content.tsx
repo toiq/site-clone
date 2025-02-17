@@ -53,7 +53,7 @@ const links = [
 
 const social = [
   {
-    name: "Dribble",
+    name: "Dribbble",
     link: "https://dribbble.com/dipainhouse",
   },
   {

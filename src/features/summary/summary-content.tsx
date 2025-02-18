@@ -15,6 +15,7 @@ export const SummaryContent = () => {
           size="medium"
           variant="outline"
           className="bg-white px-[64px] py-4"
+          asChild
         >
           <Link href="/the-team">About us</Link>
         </Button>

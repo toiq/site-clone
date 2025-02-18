@@ -28,19 +28,29 @@ export const Button: React.FC<ButtonProps> = ({
   children,
   ...props
 }) => {
-  const Component = asChild ? ("span" as React.ElementType) : "button";
+  // Combine all class names
+  const combinedClassName = cn(
+    "rounded-[800px] border border-[#006ff9] bg-[#005ed4] text-center font-bold hover:cursor-pointer whitespace-nowrap",
+    buttonVariants[variant],
+    buttonSizes[size],
+    className,
+  );
 
+  if (asChild && React.isValidElement(children)) {
+    // Narrow the type of children to ensure it supports className
+    const child = children as React.ReactElement<{ className?: string }>;
+
+    // Clone the child element and pass the combined class names and props
+    return React.cloneElement(child, {
+      className: cn(child.props.className, combinedClassName),
+      ...props,
+    });
+  }
+
+  // Default behavior: render a button element
   return (
-    <Component
-      className={cn(
-        "rounded-[800px] border border-[#006ff9] bg-[#005ed4] text-center font-bold hover:cursor-pointer",
-        buttonVariants[variant],
-        buttonSizes[size],
-        className,
-      )}
-      {...props}
-    >
-      <div>{children}</div>
-    </Component>
+    <button className={combinedClassName} {...props}>
+      {children}
+    </button>
   );
 };

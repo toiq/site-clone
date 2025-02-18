@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.custom-container {
-  max-width: 1120px;
-  width: 100%;
+@layer components {
+  .custom-container {
+    @apply mx-auto w-full max-w-[1120px] px-6;
+
+    @apply md:px-12 lg:px-24 xl:px-0;
+  }
 }

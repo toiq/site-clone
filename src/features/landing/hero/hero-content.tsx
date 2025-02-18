@@ -7,18 +7,18 @@ export const HeroContent = () => {
   return (
     <div className="font-manrope">
       <motion.p
-        className="text-[78px] font-[900] leading-[101px] tracking-[-3.12px] text-primary"
-        initial={{ opacity: 0, y: -20 }} // Start from above
-        animate={{ opacity: 1, y: 0 }} // Animate to original position
+        className="text-[40px] font-[900] leading-[52px] tracking-[-1px] text-primary lg:w-[920px] lg:text-[78px] lg:leading-[101px] lg:tracking-[-3.12px]"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        Crafting user friendly <br /> products aesthetically
+        Crafting user friendly products aesthetically
       </motion.p>
 
       <motion.p
-        className="mt-8 text-2xl font-medium leading-[43px] tracking-[0.24px] text-secondary"
-        initial={{ opacity: 0, y: -20 }} // Start from above
-        animate={{ opacity: 1, y: 0 }} // Animate to original position
+        className="mt-8 text-base font-light leading-[29px] tracking-[0.24px] text-secondary lg:text-2xl lg:font-medium lg:leading-[43px]"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.6 }}
       >
         Help find solutions that are intuitive and in accordance with client
@@ -27,12 +27,12 @@ export const HeroContent = () => {
       </motion.p>
 
       <motion.div
-        className="mt-12 flex items-center justify-between"
-        initial={{ opacity: 0, y: -20 }} // Start from above
-        animate={{ opacity: 1, y: 0 }} // Animate to original position
+        className="mt-[88px] flex items-center justify-between lg:mt-12"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1 }}
       >
-        <div className="flex items-center justify-between gap-x-4">
+        <div className="flex w-full flex-col items-center justify-between gap-y-4 lg:flex-row lg:gap-x-4 lg:gap-y-0">
           <Button
             asChild
             size="medium"
@@ -48,7 +48,7 @@ export const HeroContent = () => {
             </Link>
           </Button>
         </div>
-        <div className="h-[50px] w-[210px] overflow-hidden">
+        <div className="hidden h-[50px] w-[210px] overflow-hidden lg:block">
           <div
             className="clutch-widget overflow-hidden"
             data-url="https://widget.clutch.co"

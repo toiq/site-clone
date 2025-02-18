@@ -14,7 +14,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="relative h-full pt-[180px]">
+        <section
+          id="projects"
+          className="relative hidden h-full pt-[180px] lg:block"
+        >
           {/* Bg colors */}
           <div className="absolute left-0 top-0 z-0 h-1/3 w-full bg-accent-secondary"></div>
           <div className="absolute left-0 top-1/3 z-0 h-1/3 w-full bg-white"></div>
@@ -25,19 +28,22 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="reviews">
+        <section id="reviews" className="hidden lg:block">
           <div className="custom-container container pb-[77px] pt-[180px]">
             <ReviewsContent />
           </div>
         </section>
 
-        <section id="summary" className="bg-[#15141b]">
+        <section id="summary" className="hidden bg-[#15141b] lg:block">
           <div className="custom-container container py-[120px]">
             <SummaryContent />
           </div>
         </section>
 
-        <section id="connect" className="bg-accent-secondary py-[124px]">
+        <section
+          id="connect"
+          className="hidden bg-accent-secondary py-[124px] lg:block"
+        >
           <div className="container w-full max-w-[926px] px-3">
             <ConnectContent />
           </div>

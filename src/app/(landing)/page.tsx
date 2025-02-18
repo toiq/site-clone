@@ -14,8 +14,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects">
-          <div className="custom-container container pb-[86px] pt-40">
+        <section id="projects" className="relative h-full pt-[180px]">
+          {/* Bg colors */}
+          <div className="absolute left-0 top-0 z-0 h-1/3 w-full bg-[#fafbfc]"></div>
+          <div className="absolute left-0 top-1/3 z-0 h-1/3 w-full bg-white"></div>
+          <div className="absolute bottom-0 left-0 z-0 h-1/3 w-full bg-[#fafbfc]"></div>
+
+          <div className="custom-container container relative z-10 pb-[86px]">
             <ProjectsContent />
           </div>
         </section>

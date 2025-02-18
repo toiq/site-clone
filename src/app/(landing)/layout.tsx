@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.variable} relative min-h-screen antialiased`}>
-        <header className="fixed top-0 z-10 w-full backdrop-blur-[48px]">
+        <header className="fixed top-0 z-50 w-full backdrop-blur-[48px]">
           <Navbar />
         </header>
         {children}

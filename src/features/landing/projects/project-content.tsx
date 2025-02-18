@@ -2,7 +2,8 @@
 import { Button } from "@/components/button";
 import { ProjectCard, type ProjectCardProps } from "./project-card";
 import Link from "next/link";
-import { motion } from "motion/react";
+import { motion, useInView } from "motion/react";
+import { useRef } from "react";
 
 const projectList: ProjectCardProps[] = [
   {
@@ -64,13 +65,15 @@ const projectList: ProjectCardProps[] = [
 ];
 
 export const ProjectsContent = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
   return (
-    <div className="font-manrope">
+    <div className="font-manrope" ref={ref}>
       <div className="flex items-center justify-between">
-        {/* Left Content (Heading) */}
         <motion.div
-          initial={{ opacity: 0, y: -20 }} // Start from above
-          animate={{ opacity: 1, y: 0 }} // Animate to original position
+          initial={{ opacity: 0, y: -20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <p className="text-sm uppercase tracking-[1.4px] text-secondary">
@@ -81,10 +84,9 @@ export const ProjectsContent = () => {
           </p>
         </motion.div>
 
-        {/* Right Content (Button) */}
         <motion.div
-          initial={{ opacity: 0, y: -20 }} // Start from above
-          animate={{ opacity: 1, y: 0 }} // Animate to original position
+          initial={{ opacity: 0, y: -20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <Button
@@ -97,21 +99,11 @@ export const ProjectsContent = () => {
           </Button>
         </motion.div>
       </div>
-      <motion.div
-        transition={{ duration: 0.5, delay: 1 }}
-        className="mt-20 w-full columns-2 gap-x-20"
-      >
+      <div className="mt-20 w-full columns-2 gap-x-20">
         {projectList.map((project, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: i * 0.2 }}
-          >
-            <ProjectCard {...project} />
-          </motion.div>
+          <ProjectCard {...project} key={i} index={i} />
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 };

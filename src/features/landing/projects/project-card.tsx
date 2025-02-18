@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { motion, useInView } from "motion/react";
+import { useRef } from "react";
 
 export interface ProjectCardProps {
   imgSrc: string;
@@ -8,6 +10,7 @@ export interface ProjectCardProps {
   content: React.ReactNode;
   width: number;
   height: number;
+  index?: number;
 }
 
 export const ProjectCard = ({
@@ -17,9 +20,19 @@ export const ProjectCard = ({
   title,
   content,
   link,
+  index,
 }: ProjectCardProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <div className="mb-[46px]">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.5, delay: 0.2 * (index ?? 1) }}
+      className="mb-[46px]"
+    >
       <Link href={link} className="relative block overflow-hidden">
         <Image
           src={imgSrc}
@@ -33,6 +46,6 @@ export const ProjectCard = ({
         <p className="mt-10 text-2xl font-extrabold leading-[33px]">{title}</p>
       </Link>
       <div className="mt-3 w-[433px]">{content}</div>
-    </div>
+    </motion.div>
   );
 };

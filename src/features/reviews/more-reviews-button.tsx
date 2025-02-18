@@ -29,7 +29,7 @@ export const MoreReviewsButton = ({ reviews }: MoreReviewsButtonProps) => {
           <p className="font-bold text-primary">
             Show <span className="text-accent">{reviews.length}+</span>
           </p>
-          <p className="text-secondary">more reviews &#8595;</p>
+          <p className="font-medium text-secondary">more reviews &#8595;</p>
         </div>
       </div>
     </Link>

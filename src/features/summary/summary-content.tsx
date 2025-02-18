@@ -19,7 +19,7 @@ export const SummaryContent = () => {
         >
           <Link href="/the-team">About us</Link>
         </Button>
-        <div className="flex items-center justify-between gap-x-4">
+        <div className="flex justify-between gap-x-4">
           <Image
             src="/clutch-icon-black.png"
             width={56}
@@ -27,7 +27,7 @@ export const SummaryContent = () => {
             alt="Clutch Icon"
           />
 
-          <div>
+          <div className="flex flex-col gap-y-[7px]">
             <p className="text-lg text-white">
               <span className="font-bold leading-6">4.9</span>
               <span className="font-light"> Rating on clutch</span>

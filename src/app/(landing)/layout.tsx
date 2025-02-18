@@ -12,6 +12,8 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: "Home |  Dipa Inhouse",
+  description:
+    "Help find solutions that are intuitive and in accordance with client business goals. We provide a high-quality service in UI/UX Design, Graphic Design, Motion Design, Branding & Development.",
 };
 
 export default function RootLayout({

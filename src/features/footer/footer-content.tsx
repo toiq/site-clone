@@ -99,7 +99,7 @@ export const FooterContent = () => {
               <p className="mb-[22px]">{footerLink.name}</p>
               <ul>
                 {footerLink.items.map((footerLinkItem, i) => (
-                  <li key={i} className="mb-[21px]">
+                  <li key={i} className="mb-[19px]">
                     {footerLinkItem.link ? (
                       <Link
                         href={footerLinkItem.link}

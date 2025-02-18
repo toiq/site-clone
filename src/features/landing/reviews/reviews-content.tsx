@@ -135,12 +135,34 @@ export const ReviewsContent = () => {
       </div>
 
       <motion.div className="grid grid-cols-6 gap-y-16 pb-24">
-        {brandLogos.map((brandLogoLink, index) => (
+        {brandLogos.slice(0, 6).map((brandLogoLink, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1, y: 20 } : {}}
-            transition={{ duration: 0.2, delay: 0.5 * (index + 1) }}
+            animate={isInView ? { opacity: 1, y: 50 } : {}}
+            transition={{
+              duration: 0.6,
+              delay: 2 / (brandLogos.slice(6).length - index + 1),
+            }}
+          >
+            <Image
+              src={brandLogoLink}
+              width={187}
+              height={64}
+              alt="Brand Logo"
+              className="grayscale transition-all duration-200 hover:scale-110 hover:grayscale-0"
+            />
+          </motion.div>
+        ))}
+        {brandLogos.slice(6).map((brandLogoLink, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1, y: 50 } : {}}
+            transition={{
+              duration: 0.6,
+              delay: 2 / (brandLogos.slice(6).length - index + 1),
+            }}
           >
             <Image
               src={brandLogoLink}

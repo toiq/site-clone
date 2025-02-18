@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Help find solutions that are intuitive and in accordance with client business goals. We provide a high-quality service in UI/UX Design, Graphic Design, Motion Design, Branding & Development.",
 };
 
-export default function RootLayout({
+export default function LandingLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

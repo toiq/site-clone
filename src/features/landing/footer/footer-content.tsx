@@ -105,6 +105,7 @@ export const FooterContent = () => {
                       <Link
                         href={footerLinkItem.link}
                         className="font-bold text-primary hover:text-accent"
+                        target={`${footerLinkItem.name === "View On Map" ? "_blank" : "_self"}`}
                       >
                         {footerLinkItem.name}
                       </Link>

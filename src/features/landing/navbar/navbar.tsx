@@ -93,7 +93,7 @@ export const Navbar = () => {
               width={24}
               height={24}
               alt="Menu"
-              className="py-[14px]"
+              className="block py-[14px] lg:hidden"
               onClick={() => setIsMobileMenu((prev) => !prev)}
             />
           </div>

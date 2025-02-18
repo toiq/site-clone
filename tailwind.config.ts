@@ -18,6 +18,7 @@ export default {
         primary: "#161b2c",
         secondary: "#808a9e",
         accent: "#006ff9",
+        "accent-secondary": "#fafbfc",
       },
       container: {
         center: true,

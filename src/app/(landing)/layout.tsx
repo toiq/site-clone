@@ -3,6 +3,7 @@ import { Manrope } from "next/font/google";
 import "../globals.css";
 import { SideButtonLink } from "@/features/side-button/side-button";
 import { Navbar } from "@/features/navbar/navbar";
+import { FooterContent } from "@/features/footer/footer-content";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -25,6 +26,9 @@ export default function RootLayout({
           <Navbar />
         </header>
         {children}
+        <footer className="custom-container container">
+          <FooterContent />
+        </footer>
         <div className="fixed right-0 top-1/2 z-20 w-fit -translate-y-1/2 transform">
           <SideButtonLink />
         </div>

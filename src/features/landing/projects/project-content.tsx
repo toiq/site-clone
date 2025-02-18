@@ -1,6 +1,8 @@
+"use client";
 import { Button } from "@/components/button";
 import { ProjectCard, type ProjectCardProps } from "./project-card";
 import Link from "next/link";
+import { motion } from "motion/react";
 
 const projectList: ProjectCardProps[] = [
   {
@@ -65,29 +67,51 @@ export const ProjectsContent = () => {
   return (
     <div className="font-manrope">
       <div className="flex items-center justify-between">
-        <div>
+        {/* Left Content (Heading) */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }} // Start from above
+          animate={{ opacity: 1, y: 0 }} // Animate to original position
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           <p className="text-sm uppercase tracking-[1.4px] text-secondary">
             Our Projects
           </p>
           <p className="mt-3 text-[32px] font-[900] leading-[44px] text-primary">
             Our latest cool projects.
           </p>
-        </div>
-        <Button
-          variant="outline"
-          size="small"
-          className="border-transparent bg-white text-base"
-          asChild
-        >
-          <Link href="/work">Check our work</Link>
-        </Button>
-      </div>
+        </motion.div>
 
-      <div className="mt-20 w-full columns-2 gap-x-20">
-        {projectList.map((project, i) => (
-          <ProjectCard key={i} {...project} />
-        ))}
+        {/* Right Content (Button) */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }} // Start from above
+          animate={{ opacity: 1, y: 0 }} // Animate to original position
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
+          <Button
+            variant="outline"
+            size="small"
+            className="border-transparent bg-white text-base"
+            asChild
+          >
+            <Link href="/work">Check our work</Link>
+          </Button>
+        </motion.div>
       </div>
+      <motion.div
+        transition={{ duration: 0.5, delay: 1 }}
+        className="mt-20 w-full columns-2 gap-x-20"
+      >
+        {projectList.map((project, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: i * 0.2 }}
+          >
+            <ProjectCard {...project} />
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
   );
 };

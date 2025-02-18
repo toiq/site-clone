@@ -1,18 +1,37 @@
+"use client";
 import { Button } from "@/components/button";
 import Link from "next/link";
+import { motion } from "motion/react";
 
 export const HeroContent = () => {
   return (
     <div className="font-manrope">
-      <p className="text-[78px] font-[900] leading-[101px] tracking-[-3.12px] text-primary">
+      <motion.p
+        className="text-[78px] font-[900] leading-[101px] tracking-[-3.12px] text-primary"
+        initial={{ opacity: 0, y: -20 }} // Start from above
+        animate={{ opacity: 1, y: 0 }} // Animate to original position
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
         Crafting user friendly <br /> products aesthetically
-      </p>
-      <p className="mt-8 text-2xl font-medium leading-[43px] tracking-[0.24px] text-secondary">
+      </motion.p>
+
+      <motion.p
+        className="mt-8 text-2xl font-medium leading-[43px] tracking-[0.24px] text-secondary"
+        initial={{ opacity: 0, y: -20 }} // Start from above
+        animate={{ opacity: 1, y: 0 }} // Animate to original position
+        transition={{ duration: 0.5, delay: 0.6 }}
+      >
         Help find solutions that are intuitive and in accordance with client
         business goals. We provide a high-quality service in UI/UX Design,
         Graphic Design, Motion Design, Branding & Development.
-      </p>
-      <div className="mt-12 flex items-center justify-between">
+      </motion.p>
+
+      <motion.div
+        className="mt-12 flex items-center justify-between"
+        initial={{ opacity: 0, y: -20 }} // Start from above
+        animate={{ opacity: 1, y: 0 }} // Animate to original position
+        transition={{ duration: 0.5, delay: 1 }}
+      >
         <div className="flex items-center justify-between gap-x-4">
           <Button
             asChild
@@ -57,7 +76,7 @@ export const HeroContent = () => {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

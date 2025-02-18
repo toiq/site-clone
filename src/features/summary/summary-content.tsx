@@ -91,7 +91,7 @@ export const SummaryContent = () => {
         {/* Right Side */}
         <div className="flex w-1/2 flex-col justify-center">
           <div className="mx-20 h-full">
-            <div className="grid h-full grid-cols-2 grid-rows-2 gap-4">
+            <div className="grid h-full grid-cols-2 grid-rows-2 gap-x-8 gap-y-[81px]">
               {stats.map((stat, index) => (
                 <Stat key={index} {...stat} />
               ))}

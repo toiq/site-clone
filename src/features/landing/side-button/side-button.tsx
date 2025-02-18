@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const SideButtonLink = () => {
   return (
-    <Link href="https://www.awwwards.com/sites/ascone">
+    <Link href="https://www.awwwards.com/sites/ascone" target="_blank">
       <svg width="53.08" height="171.358">
         <path className="js-color-bg" fill="white" d="M0 0h53.08v171.358H0z" />
         <g className="js-color-text" fill="black">

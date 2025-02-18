@@ -120,7 +120,7 @@ export const ReviewsContent = () => {
           className="text-sm uppercase tracking-[1.4px] text-secondary"
           initial={{ opacity: 0, y: -20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5 }}
         >
           Our Happy Clients
         </motion.p>
@@ -128,19 +128,19 @@ export const ReviewsContent = () => {
           className="mt-3 text-[32px] font-[900] leading-[44px] text-primary"
           initial={{ opacity: 0, y: -20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           Some of our partners and clients
         </motion.p>
       </div>
 
-      <div className="grid grid-cols-6 gap-y-16 pb-24">
+      <motion.div className="grid grid-cols-6 gap-y-16 pb-24">
         {brandLogos.map((brandLogoLink, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1, y: 20 } : {}}
-            transition={{ duration: 0.5, delay: 0.2 * index }}
+            transition={{ duration: 0.2, delay: 0.5 * (index + 1) }}
           >
             <Image
               src={brandLogoLink}
@@ -151,7 +151,7 @@ export const ReviewsContent = () => {
             />
           </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       <div className="w-full">
         {reviews.slice(0, 3).map((review, i) => (

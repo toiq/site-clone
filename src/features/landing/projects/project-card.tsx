@@ -26,7 +26,7 @@ export const ProjectCard = ({
           alt="Example Image"
           width={width}
           height={height}
-          className="transform transition-transform duration-300 ease-in-out hover:scale-[1.05]"
+          className={`transform transition-transform duration-300 ease-in-out hover:scale-[1.075] ${title === "The Swag Academy Platform" ? "hover:-rotate-[4.5deg]" : ""}`}
         />
       </Link>
       <Link href={link}>

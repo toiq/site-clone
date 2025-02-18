@@ -36,7 +36,7 @@ export const Navbar = () => {
                 <li key={i}>
                   <Link
                     href={item.link}
-                    className="min-w-5 text-sm font-bold text-primary"
+                    className="min-w-5 text-sm font-bold text-primary hover:text-accent"
                   >
                     {item.name}
                   </Link>

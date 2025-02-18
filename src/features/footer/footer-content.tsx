@@ -103,7 +103,7 @@ export const FooterContent = () => {
                     {footerLinkItem.link ? (
                       <Link
                         href={footerLinkItem.link}
-                        className="font-bold text-primary"
+                        className="font-bold text-primary hover:text-accent"
                       >
                         {footerLinkItem.name}
                       </Link>
@@ -130,7 +130,7 @@ export const FooterContent = () => {
                   <li key={i}>
                     <Link
                       href={item.link}
-                      className="min-w-5 text-sm font-bold text-primary"
+                      className="min-w-5 text-sm font-bold text-primary hover:text-accent"
                     >
                       {item.name}
                     </Link>

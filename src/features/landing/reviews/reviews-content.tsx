@@ -1,5 +1,5 @@
 import { MoreReviewsButton } from "./more-reviews-button";
-import { ReviewCard, Review } from "./review-card";
+import { ReviewCard, type Review } from "./review-card";
 
 const reviews: Review[] = [
   {

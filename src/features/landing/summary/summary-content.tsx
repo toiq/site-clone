@@ -1,9 +1,9 @@
 import { Button } from "@/components/button";
 import Image from "next/image";
 import Link from "next/link";
-import { Badge, BadgeProps } from "./badge";
-import { LargeBadge, LargeBadgeProps } from "./large-badge";
-import { Stat, StatProps } from "./stat";
+import { Badge, type BadgeProps } from "./badge";
+import { LargeBadge, type LargeBadgeProps } from "./large-badge";
+import { Stat, type StatProps } from "./stat";
 
 const stats: StatProps[] = [
   {

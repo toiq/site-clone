@@ -1,5 +1,5 @@
 import { Button } from "@/components/button";
-import { ProjectCard, ProjectCardProps } from "./project-card";
+import { ProjectCard, type ProjectCardProps } from "./project-card";
 import Link from "next/link";
 
 const projectList: ProjectCardProps[] = [

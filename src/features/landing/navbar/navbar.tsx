@@ -37,7 +37,6 @@ export const Navbar = () => {
         setIsVisible(true);
       }
       setLastScrollY(current);
-      console.log({ isVisible });
     });
   }, [scrollY, lastScrollY, isVisible]);
 

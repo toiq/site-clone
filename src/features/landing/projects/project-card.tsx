@@ -20,8 +20,14 @@ export const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <div className="mb-[46px]">
-      <Link href={link}>
-        <Image src={imgSrc} alt="Example Image" width={width} height={height} />
+      <Link href={link} className="relative block overflow-hidden">
+        <Image
+          src={imgSrc}
+          alt="Example Image"
+          width={width}
+          height={height}
+          className="transform transition-transform duration-300 ease-in-out hover:scale-[1.05]"
+        />
       </Link>
       <Link href={link}>
         <p className="mt-10 text-2xl font-extrabold leading-[33px]">{title}</p>

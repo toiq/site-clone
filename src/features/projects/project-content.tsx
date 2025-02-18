@@ -79,7 +79,7 @@ export const ProjectsContent = () => {
           className="border-transparent bg-white text-base"
           asChild
         >
-          <Link href="#">Check our work</Link>
+          <Link href="/work">Check our work</Link>
         </Button>
       </div>
 

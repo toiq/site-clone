@@ -5,19 +5,19 @@ import Link from "next/link";
 const links = [
   {
     name: "Work",
-    link: "https://www.dipainhouse.com/work",
+    link: "/work",
   },
   {
     name: "Services",
-    link: "https://www.dipainhouse.com/services",
+    link: "/services",
   },
   {
     name: "Team",
-    link: "https://www.dipainhouse.com/the-team",
+    link: "/the-team",
   },
   {
     name: "Insight",
-    link: "https://www.dipainhouse.com/insight",
+    link: "/insight",
   },
 ];
 
@@ -45,10 +45,7 @@ export const Navbar = () => {
             </ul>
 
             <Button asChild size="small">
-              <Link
-                href="https://www.dipainhouse.com/contact-us"
-                className="h-full w-full"
-              >
+              <Link href="/contact-us" className="h-full w-full">
                 Contact Us
               </Link>
             </Button>

@@ -7,19 +7,19 @@ const links = [
     items: [
       {
         name: "Work",
-        link: "https://www.dipainhouse.com/work",
+        link: "/work",
       },
       {
         name: "Services",
-        link: "https://www.dipainhouse.com/services",
+        link: "/services",
       },
       {
         name: "Team",
-        link: "https://www.dipainhouse.com/the-team",
+        link: "/the-team",
       },
       {
         name: "Insight",
-        link: "https://www.dipainhouse.com/insight",
+        link: "/insight",
       },
     ],
   },
@@ -32,7 +32,7 @@ const links = [
       },
       {
         name: "Contact us",
-        link: "https://www.dipainhouse.com/contact-us",
+        link: "/contact-us",
       },
     ],
   },

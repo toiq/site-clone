@@ -9,10 +9,7 @@ export const ConnectContent = () => {
         <br /> Let&apos;s connect.
       </p>
       <Button asChild size="large">
-        <Link
-          href="https://www.dipainhouse.com/contact-us"
-          className="h-full w-full"
-        >
+        <Link href="/contact-us" className="h-full w-full">
           Let&apos;s connect
         </Link>
       </Button>

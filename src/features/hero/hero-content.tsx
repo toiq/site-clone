@@ -19,18 +19,12 @@ export const HeroContent = () => {
             size="medium"
             className="hover:bg-white hover:text-accent"
           >
-            <Link
-              href="https://www.dipainhouse.com/contact-us"
-              className="h-full w-full"
-            >
+            <Link href="/contact-us" className="h-full w-full">
               Let&apos;s connect
             </Link>
           </Button>
           <Button asChild size="medium" variant="outline">
-            <Link
-              href="https://www.dipainhouse.com/contact-us"
-              className="h-full w-full"
-            >
+            <Link href="/contact-us" className="h-full w-full">
               Check our work
             </Link>
           </Button>

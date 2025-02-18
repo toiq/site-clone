@@ -1,6 +1,9 @@
+"use client";
 import Image from "next/image";
+import { motion, useInView } from "motion/react";
 import { MoreReviewsButton } from "./more-reviews-button";
 import { ReviewCard, type Review } from "./review-card";
+import { useRef } from "react";
 
 const reviews: Review[] = [
   {
@@ -108,27 +111,45 @@ const brandLogos = [
 ];
 
 export const ReviewsContent = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
-    <div className="flex flex-col items-center font-manrope">
+    <div className="flex flex-col items-center font-manrope" ref={ref}>
       <div className="pb-20 text-center">
-        <p className="text-sm uppercase tracking-[1.4px] text-secondary">
+        <motion.p
+          className="text-sm uppercase tracking-[1.4px] text-secondary"
+          initial={{ opacity: 0, y: -20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           Our Happy Clients
-        </p>
-        <p className="mt-3 text-[32px] font-[900] leading-[44px] text-primary">
+        </motion.p>
+        <motion.p
+          className="mt-3 text-[32px] font-[900] leading-[44px] text-primary"
+          initial={{ opacity: 0, y: -20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
           Some of our partners and clients
-        </p>
+        </motion.p>
       </div>
 
       <div className="grid grid-cols-6 gap-y-16 pb-24">
         {brandLogos.map((brandLogoLink, index) => (
-          <Image
+          <motion.div
             key={index}
-            src={brandLogoLink}
-            width={187}
-            height={64}
-            alt="Brand Logo"
-            className="grayscale transition-all duration-200 hover:scale-110 hover:grayscale-0"
-          />
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1, y: 20 } : {}}
+            transition={{ duration: 0.5, delay: 0.2 * index }}
+          >
+            <Image
+              src={brandLogoLink}
+              width={187}
+              height={64}
+              alt="Brand Logo"
+              className="grayscale transition-all duration-200 hover:scale-110 hover:grayscale-0"
+            />
+          </motion.div>
         ))}
       </div>
 

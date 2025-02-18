@@ -1,6 +1,29 @@
 import { Button } from "@/components/button";
 import Image from "next/image";
 import Link from "next/link";
+import { Badge, BadgeProps } from "./badge";
+import { LargeBadge, LargeBadgeProps } from "./large-badge";
+import { Stat, StatProps } from "./stat";
+
+const stats: StatProps[] = [
+  {
+    amount: 17,
+    label: "Designer",
+  },
+  {
+    amount: 5,
+    label: "Developer",
+  },
+  {
+    amount: 3,
+    label: "Project Manager",
+  },
+  {
+    amount: 5,
+    label: "Years in Business",
+    plus: true,
+  },
+];
 
 export const SummaryContent = () => {
   return (
@@ -37,8 +60,44 @@ export const SummaryContent = () => {
             </p>
           </div>
         </div>
+      </div>
+      <div className="mt-[65px] flex w-full items-stretch justify-between">
+        {/* Left Side */}
+        <div className="grid w-1/2 grid-cols-4 gap-4">
+          {Array<BadgeProps>(4)
+            .fill({
+              imageSrc:
+                "https://shareables-prod-static.clutch.co/badges/top_clutch.co_web_design_company_information_technology_indonesia.svg",
+              link: "https://clutch.co/profile/dipa-inhouse?utm_source=clutch_top_company_badge&utm_medium=image_embed",
+            })
+            .map((badge, index) => (
+              <Badge key={index} {...badge} />
+            ))}
+          {/* Second Row: 2 Large Grids */}
+          {Array<LargeBadgeProps>(2)
+            .fill({
+              imageSrc:
+                "https://shareables-prod-static.clutch.co/badges/top_clutch.co_company_indonesia_2022_award.svg",
+              link: "https://clutch.co/profile/dipa-inhouse?utm_source=clutch_award_badge&utm_medium=image_embed",
+              text: "Top Company in Indonesia 2022",
+            })
+            .map((badge, index) => (
+              <div className="col-span-2" key={index}>
+                <LargeBadge {...badge} />
+              </div>
+            ))}
+        </div>
 
-        <div className="mt-[65px]"></div>
+        {/* Right Side */}
+        <div className="flex w-1/2 flex-col justify-center">
+          <div className="mx-20 h-full">
+            <div className="grid h-full grid-cols-2 grid-rows-2 gap-4">
+              {stats.map((stat, index) => (
+                <Stat key={index} {...stat} />
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

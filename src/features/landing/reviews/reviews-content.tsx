@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { MoreReviewsButton } from "./more-reviews-button";
 import { ReviewCard, type Review } from "./review-card";
 
@@ -91,16 +92,44 @@ const reviews: Review[] = [
   },
 ];
 
+const brandLogos = [
+  "https://www.dipainhouse.com/assets/svg/our-partners/starlinks.png",
+  "https://www.dipainhouse.com/assets/svg/our-partners/chargeflow.svg",
+  "https://www.dipainhouse.com/assets/svg/our-partners/Xrecruiter.png",
+  "https://www.dipainhouse.com/assets/svg/our-partners/Alquraisi.png",
+  "https://www.dipainhouse.com/assets/svg/our-partners/billy.svg",
+  "https://www.dipainhouse.com/assets/svg/our-partners/swag.png",
+  "https://www.dipainhouse.com/assets/svg/our-partners/buzzbassador.svg",
+  "https://www.dipainhouse.com/assets/svg/our-partners/gymdesk.svg",
+  "https://www.dipainhouse.com/assets/svg/our-partners/masterpos.svg",
+  "https://www.dipainhouse.com/assets/svg/our-partners/BMKG.png",
+  "https://www.dipainhouse.com/assets/svg/our-partners/wenodo.png",
+  "https://www.dipainhouse.com/assets/svg/our-partners/Icoms.png",
+];
+
 export const ReviewsContent = () => {
   return (
     <div className="flex flex-col items-center font-manrope">
-      <div className="pb-[240px] text-center">
+      <div className="pb-20 text-center">
         <p className="text-sm uppercase tracking-[1.4px] text-secondary">
           Our Happy Clients
         </p>
         <p className="mt-3 text-[32px] font-[900] leading-[44px] text-primary">
           Some of our partners and clients
         </p>
+      </div>
+
+      <div className="grid grid-cols-6 gap-y-16 pb-24">
+        {brandLogos.map((brandLogoLink, index) => (
+          <Image
+            key={index}
+            src={brandLogoLink}
+            width={187}
+            height={64}
+            alt="Brand Logo"
+            className="grayscale transition-all duration-200 hover:scale-110 hover:grayscale-0"
+          />
+        ))}
       </div>
 
       <div className="w-full">

@@ -29,9 +29,9 @@ export const HeroContent = () => {
             </Link>
           </Button>
         </div>
-        <div className="w-[200px]">
+        <div className="h-[50px] w-[210px] overflow-hidden">
           <div
-            className="clutch-widget"
+            className="clutch-widget overflow-hidden"
             data-url="https://widget.clutch.co"
             data-widget-type={2}
             data-height={45}
@@ -53,7 +53,7 @@ export const HeroContent = () => {
                 height: "44px",
                 outline: "none",
               }}
-              title="[object Object]2"
+              title="Clutch Review"
             />
           </div>
         </div>

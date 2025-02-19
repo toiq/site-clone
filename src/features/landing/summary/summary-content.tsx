@@ -28,12 +28,21 @@ const stats: StatProps[] = [
 export const SummaryContent = () => {
   return (
     <div className="flex w-full flex-col font-manrope">
-      <p className="font-manrope text-[32px] font-medium leading-[51.2px] text-white">
+      <div className="flex-collg:hidden w-full pb-12">
+        <div className="h-full">
+          <div className="grid h-full grid-cols-2 grid-rows-2 gap-x-8 gap-y-[81px]">
+            {stats.map((stat, index) => (
+              <Stat key={index} {...stat} />
+            ))}
+          </div>
+        </div>
+      </div>
+      <p className="font-manrope text-xl font-bold text-white lg:text-[32px] lg:font-medium lg:leading-[51.2px]">
         As a full-service UX design agency, we work closely with our clients{" "}
         <br /> to define, design and develop transformative user experiences{" "}
         <br /> across all platforms and brand’s touchpoints.
       </p>
-      <div className="mt-[65px] flex items-center gap-x-10">
+      <div className="mt-[65px] flex flex-col gap-y-[42px] lg:flex-row lg:items-center lg:gap-x-10 lg:gap-y-0">
         <Button
           size="medium"
           variant="outline"
@@ -42,7 +51,7 @@ export const SummaryContent = () => {
         >
           <Link href="/the-team">About us</Link>
         </Button>
-        <div className="flex justify-between gap-x-4">
+        <div className="flex gap-x-4">
           <Image
             src="/clutch-icon-black.png"
             width={56}
@@ -63,7 +72,7 @@ export const SummaryContent = () => {
       </div>
       <div className="mt-[65px] flex w-full items-stretch justify-between">
         {/* Left Side */}
-        <div className="grid w-1/2 grid-cols-4 gap-4">
+        <div className="grid w-full grid-cols-4 gap-4 lg:w-1/2">
           {Array<BadgeProps>(4)
             .fill({
               imageSrc:
@@ -89,7 +98,7 @@ export const SummaryContent = () => {
         </div>
 
         {/* Right Side */}
-        <div className="flex w-1/2 flex-col justify-center">
+        <div className="hidden w-1/2 flex-col justify-center lg:flex">
           <div className="mx-20 h-full">
             <div className="grid h-full grid-cols-2 grid-rows-2 gap-x-8 gap-y-[81px]">
               {stats.map((stat, index) => (

@@ -31,8 +31,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="summary" className="hidden bg-[#15141b] lg:block">
-          <div className="custom-container container py-[120px]">
+        <section id="summary" className="bg-[#15141b]">
+          <div className="custom-container container py-12 lg:py-[120px]">
             <SummaryContent />
           </div>
         </section>

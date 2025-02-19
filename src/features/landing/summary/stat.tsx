@@ -7,11 +7,13 @@ export interface StatProps {
 export const Stat = ({ amount, plus, label }: StatProps) => {
   return (
     <div className="text-white">
-      <p className="text-[40px] font-extrabold leading-[52px]">
+      <p className="text-[32px] font-extrabold lg:text-[40px] lg:leading-[52px]">
         {amount}
         {plus && "+"}
       </p>
-      <p className="text-xl leading-9">{label}</p>
+      <p className="whitespace-nowrap text-lg lg:text-xl lg:leading-9">
+        {label}
+      </p>
     </div>
   );
 };

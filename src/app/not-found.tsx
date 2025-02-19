@@ -10,14 +10,7 @@ export default async function NotFound() {
   return (
     <div className="flex h-screen flex-col items-center justify-center">
       <div className="space-y-4 text-center">
-        <h2
-          className="font-bold text-red-500 sm:text-5xl"
-          style={{
-            fontSize: "256px",
-          }}
-        >
-          404
-        </h2>
+        <h2 className="text-8xl font-bold text-red-500">404</h2>
         <p className="text-2xl uppercase text-secondary">Page not Found</p>
         <p className="py-5 text-lg text-gray-600 sm:text-xl">
           Oops! The page you are looking for <br /> does not exist or is under

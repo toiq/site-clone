@@ -28,7 +28,7 @@ export default function LandingLayout({
           <Navbar />
         </header>
         {children}
-        <footer className="custom-container container hidden lg:block">
+        <footer className="custom-container container">
           <FooterContent />
         </footer>
         <div className="fixed right-0 top-1/2 z-20 w-fit -translate-y-1/2 transform">

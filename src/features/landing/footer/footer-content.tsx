@@ -73,11 +73,11 @@ const social = [
 
 export const FooterContent = () => {
   return (
-    <div className="pt-[70px]">
-      <div className="flex min-h-[256px] w-full justify-between">
+    <div className="pt-10 lg:pt-[70px]">
+      <div className="flex min-h-[256px] w-full flex-col justify-between lg:flex-row">
         {/* Left Side */}
         <div className="w-1/2 font-manrope">
-          <p className="mb-5 text-[28px] font-extrabold leading-[45px] text-primary">
+          <p className="mb-5 text-[22px] font-extrabold text-primary lg:text-[28px] lg:leading-[45px]">
             Crafting user friendly <br /> products aesthetically
           </p>
           <Link
@@ -90,11 +90,13 @@ export const FooterContent = () => {
               width={24}
               height={24}
             />
-            <p className="text-xl leading-9 text-accent">hi@dipainhouse.com</p>
+            <p className="leading-9 text-accent lg:text-xl">
+              hi@dipainhouse.com
+            </p>
           </Link>
         </div>
         {/* Right side */}
-        <div className="grid w-1/2 grid-cols-3 px-3 font-manrope">
+        <div className="mt-8 grid w-full grid-cols-2 px-3 font-manrope lg:mt-0 lg:w-1/2 lg:grid-cols-3">
           {links.map((footerLink, i) => (
             <div key={i} className="col-span-1 text-sm text-secondary">
               <p className="mb-[22px]">{footerLink.name}</p>

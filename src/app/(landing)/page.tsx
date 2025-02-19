@@ -39,7 +39,7 @@ export default function Home() {
 
         <section
           id="connect"
-          className="hidden bg-accent-secondary py-[124px] lg:block"
+          className="bg-accent-secondary py-12 lg:py-[124px]"
         >
           <div className="container w-full max-w-[926px] px-3">
             <ConnectContent />

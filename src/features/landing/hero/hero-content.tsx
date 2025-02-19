@@ -32,23 +32,23 @@ export const HeroContent = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1 }}
       >
-        <div className="flex w-full flex-col items-center justify-between gap-y-4 lg:flex-row lg:gap-x-4 lg:gap-y-0">
+        <div className="flex w-full flex-col items-center justify-between gap-y-4 lg:flex-row lg:justify-start lg:gap-x-4 lg:gap-y-0">
           <Button
             asChild
             size="medium"
             className="hover:bg-white hover:text-accent"
           >
-            <Link href="/contact-us" className="h-full w-full">
+            <Link href="/contact-us" className="h-full w-full lg:w-fit">
               Let&apos;s connect
             </Link>
           </Button>
           <Button asChild size="medium" variant="outline">
-            <Link href="/contact-us" className="h-full w-full">
+            <Link href="/contact-us" className="h-full w-full lg:w-fit">
               Check our work
             </Link>
           </Button>
         </div>
-        <div className="hidden h-[50px] w-[210px] overflow-hidden lg:block">
+        <div className="hidden overflow-hidden lg:block">
           <div
             className="clutch-widget overflow-hidden"
             data-url="https://widget.clutch.co"

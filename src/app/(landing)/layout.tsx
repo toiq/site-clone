@@ -27,7 +27,7 @@ export default function LandingLayout({
         <header className="fixed top-0 z-50 w-full">
           <Navbar />
         </header>
-        {children}
+        <main className="overflow-x-hidden">{children}</main>
         <footer className="custom-container container">
           <FooterContent />
         </footer>

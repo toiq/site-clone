@@ -14,7 +14,7 @@ export const FooterBottom = ({ social }: { social: SocialLink[] }) => {
           <div className="flex w-full flex-col gap-y-6 lg:flex-row lg:items-center lg:justify-between lg:gap-y-0">
             <div className="flex flex-col gap-y-8 lg:flex-row lg:items-center lg:gap-x-12 lg:gap-y-0">
               <Image src="/logo.png" width={40} height={40} alt="Logo" />
-              <ul className="flex gap-x-14">
+              <ul className="flex gap-x-8 lg:gap-x-14">
                 {social.map((item, i) => (
                   <li key={i}>
                     <Link

@@ -58,7 +58,7 @@ export const Navbar = () => {
       initial={{ y: 0 }}
       animate={{ y: isVisible ? 0 : -100 }}
       transition={{ duration: 0.3 }}
-      className="sticky top-0 w-full border border-transparent border-b-[#e8eef7] bg-white/50 py-[21px] font-manrope backdrop-blur-[48px]"
+      className="sticky top-0 w-full overflow-x-hidden border border-transparent border-b-[#e8eef7] bg-white/50 py-[21px] font-manrope backdrop-blur-[48px]"
     >
       <div className="container max-w-screen-xl">
         <div className="flex items-center justify-between px-6 md:px-12 lg:px-4">
@@ -100,7 +100,7 @@ export const Navbar = () => {
         </div>
       </div>
       {isMobileMenu && (
-        <div className="z-[99] h-screen w-full bg-white text-center">
+        <div className="z-[99] h-screen w-full overflow-x-hidden bg-white text-center">
           <ul className="mt-6 flex h-full flex-col items-center">
             {links.map((item, i) => (
               <li key={i} className="mb-5">

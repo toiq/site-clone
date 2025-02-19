@@ -33,7 +33,10 @@ export const ProjectCard = ({
       transition={{ duration: 0.5, delay: 0.2 * (index ?? 1) }}
       className="mb-[46px]"
     >
-      <Link href={link} className="relative block overflow-hidden">
+      <Link
+        href={link}
+        className="relative block w-full overflow-hidden bg-[#f8f8fa]"
+      >
         <Image
           src={imgSrc}
           alt="Example Image"
@@ -45,7 +48,7 @@ export const ProjectCard = ({
       <Link href={link}>
         <p className="mt-10 text-2xl font-extrabold leading-[33px]">{title}</p>
       </Link>
-      <div className="mt-3 w-[433px]">{content}</div>
+      <div className="mt-3 pb-[38px] lg:w-[433px] lg:pb-0">{content}</div>
     </motion.div>
   );
 };

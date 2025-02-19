@@ -70,7 +70,7 @@ export const ProjectsContent = () => {
 
   return (
     <div className="font-manrope" ref={ref}>
-      <div className="flex items-center justify-between">
+      <div className="flex w-full flex-col gap-y-10 lg:flex-row lg:items-center lg:justify-between lg:gap-y-0">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -92,14 +92,14 @@ export const ProjectsContent = () => {
           <Button
             variant="outline"
             size="small"
-            className="border-transparent bg-white text-base"
+            className="block border-transparent bg-white text-base lg:w-fit"
             asChild
           >
             <Link href="/work">Check our work</Link>
           </Button>
         </motion.div>
       </div>
-      <div className="mt-20 w-full columns-2 gap-x-20">
+      <div className="colums-1 mt-20 w-full gap-x-20 lg:columns-2">
         {projectList.map((project, i) => (
           <ProjectCard {...project} key={i} index={i} />
         ))}

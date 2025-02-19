@@ -14,16 +14,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section
-          id="projects"
-          className="relative hidden h-full pt-[180px] lg:block"
-        >
+        <section id="projects" className="relative h-full pt-14 lg:pt-[180px]">
           {/* Bg colors */}
           <div className="absolute left-0 top-0 z-0 h-1/3 w-full bg-accent-secondary"></div>
           <div className="absolute left-0 top-1/3 z-0 h-1/3 w-full bg-white"></div>
           <div className="absolute bottom-0 left-0 z-0 h-1/3 w-full bg-accent-secondary"></div>
 
-          <div className="custom-container container relative z-10 pb-[86px]">
+          <div className="custom-container container relative z-10 lg:pb-[86px]">
             <ProjectsContent />
           </div>
         </section>

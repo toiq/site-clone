@@ -28,7 +28,7 @@ const stats: StatProps[] = [
 export const SummaryContent = () => {
   return (
     <div className="flex w-full flex-col font-manrope">
-      <div className="flex-collg:hidden w-full pb-12">
+      <div className="w-full flex-col pb-12 lg:hidden">
         <div className="h-full">
           <div className="grid h-full grid-cols-2 grid-rows-2 gap-x-8 gap-y-[81px]">
             {stats.map((stat, index) => (

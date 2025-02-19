@@ -28,8 +28,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="reviews" className="hidden lg:block">
-          <div className="custom-container container pb-[77px] pt-[180px]">
+        <section id="reviews" className="lg:block">
+          <div className="custom-container container pb-10 pt-[30px] lg:pb-[77px] lg:pt-[180px]">
             <ReviewsContent />
           </div>
         </section>

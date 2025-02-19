@@ -125,7 +125,7 @@ export const ReviewsContent = () => {
           Our Happy Clients
         </motion.p>
         <motion.p
-          className="mt-3 text-[32px] font-[900] leading-[44px] text-primary"
+          className="mt-3 text-[22px] font-[900] leading-[30px] text-primary lg:text-[32px] lg:leading-[44px]"
           initial={{ opacity: 0, y: -20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -134,7 +134,7 @@ export const ReviewsContent = () => {
         </motion.p>
       </div>
 
-      <motion.div className="grid grid-cols-6 gap-y-16 pb-24">
+      <motion.div className="grid grid-cols-3 gap-y-16 pb-24 md:grid-cols-4 lg:grid-cols-6">
         {brandLogos.slice(0, 6).map((brandLogoLink, index) => (
           <motion.div
             key={index}
